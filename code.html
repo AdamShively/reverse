@@ -12,15 +12,17 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="css/site.css" rel="stylesheet">
     <link href="css/prism.css" rel="stylesheet">
-    <!--go to favicon.io upload png file put all in image folder-->
     <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
     <!-- ==== Nav Section ==== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/smalllogo.svg"  class=" d-inline-block align-text-top pe-2"
+            <a class="navbar-brand logofont" href="#"><img src="img/smalllogo.svg" class=" d-inline-block align-text-top pe-2"
                     alt="Adam's logo" width="50" height="24">REVERSE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,20 +52,82 @@
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
         <div class="container py-5 px-5 mt-5">
-            <h2 class="border-1 border-bottom border-dark">The code for REVERSE</h2>
             <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
+                    <h3 class="border-1 border-bottom border-primary mb-3">The Code for <span class="logofont">REVERSE</span></h3>
                     <pre class="line-numbers"><code class="language-javascript">
-                        //Call Hello World
-                        function HellowWorld() {
-                            alert("Hello World");
+                        //Get the user's input string.
+                        function getValue() {
+
+                            //Get string that the user entered.
+                            let inputStr = document.getElementById("str").value;
+                            
+                            //Make sure user entered a string.
+                            if (inputStr.length > 0) {
+
+                                //Reverse the input string with function call.
+                                let reverseStr = generateReverse(inputStr);
+
+                                //Call function to display reverse string.
+                                displayValue(reverseStr);
+                            }
+                            else {
+                                //Show the alert box.
+                                alert("Please input a string to reverse.");
+                            }
+                        }
+
+                        //Reverse the input string.
+                        function generateReverse(inputStr) {
+                            let reverseStr = "";
+
+                            //Loop through characters and add to a new string.
+                            for (let i = inputStr.length-1; i >= 0; i--) {
+
+                                reverseStr += inputStr[i];
+                            }
+
+                            return reverseStr;
+                        }
+
+                        //Display the reversed string.
+                        function displayValue(reverseStr) {
+
+                            //Write reversed string to the page.
+                            document.getElementById("reversed").innerHTML = `Reversed String: ${reverseStr}`;
+
+                            //Allow display message to be displayed.
+                            document.getElementById("alert").classList.remove("invisible");
                         }
                     </code></pre>
                 </div>
-                <div class="col-lg-4">
-                    <p>The Code is structed in one function</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays a message of "Hello World"</p>
+                <div class="col-lg-5">
+                    <h3 class="border-1 border-bottom border-primary mb-3">The Javascript Functions</h3>
+                    <h5 >The getValue Function:</h5>
+                    <p> This function gets the input that was entered by 
+                        the user and "inputStr" is initialized to it. A conditional
+                        statement is used to make sure that the length of 
+                        "inputStr" is more than zero. If it is then "reverseStr" is 
+                        initialized to  a function call of "generateReverse" with
+                        "inputStr" being passed as its arguement. A call to the function
+                        "displayValue" is then made with "reverseStr" being passed as 
+                        its arguement. An alert box is displayed telling the user to enter 
+                        a string if non was entered.
+                    </p>
+                    <h5 >The generateReverse Function:</h5>
+                    <p>This function has the string to be reversed as its parameter.
+                        The initialization of "reverseStr" is to an empty string.
+                        A reverse for loop is used to add all of the characters from the
+                        "reverseStr" parameter to reverseStr starting with the last index.
+                        Following the loop, "reverseStr" is returned.
+                    </p>
+                    <h5 >The displayValue Function:</h5>
+                    <p>This function has the reversed string as its parameter.
+                        The parameter "reverseStr" is written to the page and 
+                        the class "invisible" is removed from the HTML tag
+                        that has the id "alert" allowing the reversed string to 
+                        be displayed.
+                    </p>
                 </div>
             </div>
         </div>
@@ -111,6 +175,3 @@
 </body>
 
 </html>
-
-<!--https://getbootstrap.com/docs/5.0/-->
-<!--prismjs.com-->

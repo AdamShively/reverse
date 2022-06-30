@@ -11,15 +11,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="css/site.css" rel="stylesheet">
-    <!--go to favicon.io upload png file put all in image folder-->
     <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
     <!-- ==== Nav Section ==== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/smalllogo.svg"  class=" d-inline-block align-text-top pe-2"
+            <a class="navbar-brand logofont" href="#"><img src="img/smalllogo.svg"  class=" d-inline-block align-text-top pe-2"
                     alt="Adam's logo" width="50" height="24">REVERSE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,19 +53,18 @@
         <div class="container px-4 py-5">
             <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
                 <div class="col order-last order-lg-first">
-                    <h1 class="display-5 fw-bold lh-1 mb-3"> REVERSE: A Coding Project</h1>
-                    <h4 class="lead">A javascript coding challenge that uses a loop to reverse and display a string that the
-                        user has entered.
+                    <h1 class="display-5 fw-bold lh-1 mb-3"><span class="logofont">REVERSE</span>: Reversing a String</h1>
+                    <h4 class="lead">A javascript coding challenge that reverses and displays a string that
+                        the user has entered.
                     </h4>
                     <ul class="fa-ul pt-2 checklist">
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS and Bootstrap Layout</li>
+                        <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Dom Manipulation</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Fundamentals</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Loops</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Functions</li>
-                        <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Dom Manipulation</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Conditional Statements</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Boolean Logic</li>
-                        <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Modulus Operator</li>
                     </ul>
                     <div>
                         <a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="app.html">Take a Look</a>
@@ -87,7 +88,7 @@
     </main>
 
 
-    <footer class="footer mt-auto sticky-footer">
+    <footer class="footer mt-auto sticky-footer bg-dark">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 py-2">
                 <div class="col text-light d-flex align-items-center order-last order-lg-first">
@@ -120,5 +121,3 @@
 </body>
 
 </html>
-
-<!--https://getbootstrap.com/docs/5.0/-->

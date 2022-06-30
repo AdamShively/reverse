@@ -1,8 +1,6 @@
 //Get the user's input string.
-//Controller function.
 function getValue() {
 
-    //document.getElementById("alert").classList.add("invisible");
     //Get string that the user entered.
     let inputStr = document.getElementById("str").value;
     
@@ -22,7 +20,6 @@ function getValue() {
 }
 
 //Reverse the input string.
-//Logic function.
 function generateReverse(inputStr) {
     let reverseStr = "";
 
@@ -36,11 +33,11 @@ function generateReverse(inputStr) {
 }
 
 //Display the reversed string.
-//View function.
 function displayValue(reverseStr) {
+
     //Write reversed string to the page.
     document.getElementById("reversed").innerHTML = `Reversed String: ${reverseStr}`;
 
-    //Allow display message to be seen.
+    //Allow display message to be displayed.
     document.getElementById("alert").classList.remove("invisible");
 }

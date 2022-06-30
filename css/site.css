@@ -2,6 +2,7 @@ main>.container {
     padding: 60px 15px 0;
     margin-bottom: 5rem;
 }
+
 .sticky-footer {
     position: sticky;
     left: 0;
@@ -10,8 +11,8 @@ main>.container {
 }
 
 :root {
-    --primary: rgb(147, 147, 241);
-    --secondary: rgb(11, 25, 149);
+    --primary: rgb(11, 25, 149);
+    --secondary: rgb(33, 144, 222);
     --dark-color: rgb(53, 49, 49);
     --white-color: rgb(236, 233, 233);
 }
@@ -37,11 +38,11 @@ footer .social>a {
 
 footer .social>a:hover {
     opacity: 0.9;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .bsicon {
@@ -53,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cssicon {
-    color: rgb(33, 144, 222);
+    color: var(--secondary);
 }
 
 .htmlicon {
@@ -61,11 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-    background-color: rgb(33, 144, 222);
+    background-color: var(--secondary);
 }
 
 .checklist >li {
-    color: var(--secondary);
+    color: var(--primary);
+}
+
+.logofont {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 code[class*="language-"],
