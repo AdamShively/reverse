@@ -11,7 +11,7 @@ main>.container {
 
 :root {
     --primary: rgb(147, 147, 241);
-    --secondary: rgb(5, 95, 5);
+    --secondary: rgb(11, 25, 149);
     --dark-color: rgb(53, 49, 49);
     --white-color: rgb(236, 233, 233);
 }
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cssicon {
-    color: rgb(11,82,214);
+    color: rgb(33, 144, 222);
 }
 
 .htmlicon {
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-    background-color: 0;
+    background-color: rgb(33, 144, 222);
 }
 
 .checklist >li {
